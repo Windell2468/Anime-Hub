@@ -1,0 +1,55 @@
+/* Navbar */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: orangered;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+
+/* Avoid content hiding behind navbar */
+body {
+  padding-top: 100px;
+  background-color: aliceblue;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+}
+
+/* Search bar */
+.search-bar {
+  width: 260px;
+  padding: 8px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+/* Right nav links */
+.nav-right {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-right a {
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav-right a:hover,
+.logo:hover {
+  text-decoration: underline;
+}
