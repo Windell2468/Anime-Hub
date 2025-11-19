@@ -2,7 +2,7 @@
 
 Submitted by: **Jerry Rogers Jr**
 
-This web app: **is about create a comment of anime series. It allows users to make a comment about their favorite series, make any questions, and qoutes **
+This web app: **is about creating a comment on an anime series. It allows users to comment on their favorite series, ask questions, and share quotes.**
 
 Time spent: **9** hours spent in total
 
@@ -69,7 +69,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='./Project 8 - Anime Hub   .gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./The Anime Hub.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
