@@ -1,43 +1,58 @@
 import { useState } from "react";
-import { supabase } from "../client";
 import { useNavigate } from "react-router-dom";
+import { supabase } from "../client";
 
-
-const CreateAnimePost = () => {
-    const navigate = useNavigate();
+export default function CreateAnimePost() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const [imageURL,setImageUrl] = useState("");
-  
+  const [imageUrl, setImageUrl] = useState("");
+  const navigate = useNavigate();
 
-  const createPost = async () => {
-    const { error } = await  supabase
-    .from("posts")
-    .insert([{title, content, imageURL: imageURL}])
+  const handleSubmit = async () => {
+    if (!title.trim()) return alert("Title is required!");
 
-    if (!error) {
-        navigate("/");
+    const { error } = await supabase.from("posts").insert([
+      {
+        title,
+        content,
+        image_url: imageUrl, //  MUST match Supabase column
+        upvotes: 0,
+      },
+    ]);
+
+    if (error) {
+      console.log(error);
+      alert("Error creating post");
     } else {
-        console.error(error);
+      navigate("/"); // back to home
     }
   };
 
-
   return (
-    <div>
-      <h2>Create Anime Post</h2>
-      <input type="text" placeholder="Post Title" value={title} onChange={(e) => setTitle(e.target.value)}
-      />
-      <textarea placeholder="Description" value={content} onChange={(e) => setContent(e.target.value)}
-       />
-      <input type="text" placeholder="Image URL" value={inputValue} onChange={(e) => setImageUrl(e.target.value)}
-      />
-      <button onClick={createPost}>Submit Post Button</button>
-    </div>
+    <div className="create-post">
+  <h1>Create a New Post</h1>
+
+  <div className="form-group">
+    <input
+      type="text"
+      placeholder="Title"
+      onChange={(e) => setTitle(e.target.value)}
+    />
+
+    <textarea
+      placeholder="Content (Optional)"
+      onChange={(e) => setContent(e.target.value)}
+    ></textarea>
+
+    <input
+      type="text"
+      placeholder="Image URL (Optional)"
+      onChange={(e) => setImageUrl(e.target.value)}
+    />
+
+    <button onClick={handleSubmit}>Create Post</button>
+  </div>
+</div>
+
   );
-};
-
-export default CreateAnimePost;
-
-
-
+}
