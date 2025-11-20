@@ -80,7 +80,7 @@ GIF created with ...
 
 ## Notes
 https://frabjous-cascaron-763cda.netlify.app/
-https://app.netlify.com/projects/frabjous-cascaron-763cda/deploys/691e5f40210b040008f62ff4
+
 One challenge I faced was getting the update and delete features to work correctly for posts. I also had trouble linking comments to the correct post, but it was a good challenge because it helped me understand how everything works.
 
 ## License
