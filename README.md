@@ -2,7 +2,7 @@
 
 Submitted by: **Jerry Rogers Jr**
 
-This web app: **is about creating a comment on an anime series. It allows users to comment on their favorite series, ask questions, and share quotes.**
+This web app: **allows users to comment on their favorite anime series, ask questions, and share quotes. It creates a space for anime fans to share opinions and start discussions.**
 
 Time spent: **9** hours spent in total
 
@@ -80,11 +80,12 @@ GIF created with ...
 
 ## Notes
 https://frabjous-cascaron-763cda.netlify.app/
+https://app.netlify.com/projects/frabjous-cascaron-763cda/deploys/691e5f40210b040008f62ff4
 One challenge I faced was getting the update and delete features to work correctly for posts. I also had trouble linking comments to the correct post, but it was a good challenge because it helped me understand how everything works.
 
 ## License
 
-    Copyright [2025] [Jerry Rogers Jr.]
+    Copyright [2025] [Jerry Rogers Jr]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
